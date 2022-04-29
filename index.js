@@ -17,6 +17,11 @@ const DB = new Enmap({
 
   //btoa()
 DB.ensure("USP")
+
+app.get('/', (req, res) => {
+    res.end("Online!")
+});
+
 app.get('/api/check', (req, res) => {
     const UserId = req.body.user;
     const data = DB.get("USP")
